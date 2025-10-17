@@ -1,0 +1,259 @@
+
+:root {
+    --fond-oscuro: #1E1E1E;
+    --fond-claro: #2A2A2A;
+    --col-letra: white;
+    --col-azul-electrico: #00B0FF;
+    --col-azul-transicion-botones: #0086CC;
+    --col-inputs: #333333;
+    --letr-titulos: 'Orbitron', sans-serif;
+    --letr-normal: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--fond-oscuro);
+    color: var(--col-letra);
+    font-family: var(--letr-normal);
+    display: flex;
+    margin: 0;
+}
+.container_principal{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+.menu {
+    position: relative; 
+    background-color: var(--fond-claro);
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0px 30px 0px 0px;
+    
+    
+}
+.sidebar{
+    width: 200px;
+}
+
+.sidebar .logo {
+    font-family: var(--letr-titulos);
+    color: var(--col-azul-electrico);
+    text-align: start;
+    margin-left: 20px;
+    font-size: 28px;
+    font-weight:900;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+nav ul li {
+    margin: 8px 0;
+}
+
+nav ul li a {
+    color: var(--col-letra);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.lista{
+    display: flex;
+    align-items: center;
+}
+
+.lista a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.lista img{
+    width: 23px;
+    margin-bottom: 5px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.perfil nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.perfil nav ul li {
+    margin: 5px 0px;
+}
+
+.perfil .lista {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.perfil .lista img {
+    width: 23px;
+    margin-right: 5px;
+}
+
+.container_central{
+    position: relative; 
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.home{
+    width: 120vh;
+}
+.home h1{
+    font-size: 22px;
+    font-family: var(--letr-normal);
+    color: var(--col-azul-electrico);
+
+}
+.funciones_principales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.funciones_principales h1{
+    font-size: 22px;
+    font-family: var(--letr-normal);
+    color: var(--col-azul-electrico);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.cards1{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.cards2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.btn{
+    width: 228px;
+    height: 139px;
+    background-color: #2A2A2A;
+    margin: 0px 20px;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.btn:hover{
+    background-color: #3a3a3a;
+    transform: scale(1.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.texto_btn{
+    color: white;
+    font-size: 17px;
+    font-weight:600;
+}
+.img_btn img{
+    width: 35px;
+    margin: 10px;
+}
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logos .logo_individual1 {
+    width: 95px;
+    height: 45px;
+    background-color: var(--col-letra);
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.logos .logo_individual2 {
+    width: 65px;
+    height: 65px;
+    margin-left: 10px;
+}
+
+.container_end{
+    position: relative; 
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.card_end1{
+    width: 228px;
+    height: 139px;
+    background-color: #2A2A2A;
+    margin: 15px 0px;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.texto_end1_btn{
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
+.img_end1_btn img{
+    width: 60px;
+    margin-left: 30px;
+}
+.card_end{
+    width: 228px;
+    height: 139px;
+    background-color: #2A2A2A;
+    margin: 15px 0px;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.texto_end_btn{
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 10px;
+    margin-left: 20px;
+}
+.texto_end_btn_usuarios{
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 10px;
+    margin-left: 20px;
+}

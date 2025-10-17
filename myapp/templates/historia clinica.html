@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historia clinica</title>
+  <link rel="stylesheet" href="{% static 'myapp/css/styles_historia_clinica.css'%}">
+  <script src="{% static 'myapp/js/scripts.js' %}" defer></script>
+</head>
+<body>
+  <button class="hamburguesa" onclick="toggleMenu()"><img src="{% static 'myapp/icon/menu.png' %}" alt=""></button>
+  <div class="menu">
+    <div id="sidebar" class="sidebar">
+      <h2 class="logo" onclick="toggleMenu()">NEX</h2>
+        <nav>
+          <ul>
+              <li>
+                  <div class="lista"><a href="{% url 'home' %}"><img src="{% static 'myapp/icon/home.png' %}" alt="">Home</a></div>
+              </li>
+              <li>
+                  <div class="lista"><a href="#"><img src="{% static 'myapp/icon/predicciones.png' %}" alt="">Predicciones</a></div>
+              </li>
+              <li>
+                  <div class="lista"><a href="{% url 'historia_clinica' %}"><img src="{% static 'myapp/icon/historia clinica.png' %}" alt="">Historia Clínica</a></div>
+              </li>
+              <li>
+                  <div class="lista"><a href="#"><img src="{% static 'myapp/icon/estadisticas.png' %}" alt="">Estadísticas</a></div>
+              </li>
+              <li>
+                  <div class="lista"><a href="#"><img src="{% static 'myapp/icon/biblioteca medica.png' %}" alt="">Biblioteca Médica</a></div>
+              </li>
+              <li>
+                  <div class="lista"><a href="#"><img src="{% static 'myapp/icon/noticias.png' %}" alt="">Noticias</a></div>
+              </li>
+              <li>
+                  <div class="lista"><a href="#"><img src="{% static 'myapp/icon/soporte y ayuda.png' %}" alt="">Soporte y Ayuda</a></div>
+              </li>
+          </ul>
+      </nav>
+    </div>
+    <div class="perfil">
+      <nav>
+          <ul>
+              <li>
+                  <div class="lista"><a class="l1" href="">Perfil <img src="{% static 'myapp/icon/perfil.png' %}" alt=""></a></div>         
+              </li>
+              <li>
+                  <div class="lista"><a class="l1" href="{% url 'logout' %}">Cerrar sesión <img src="{% static 'myapp/icon/cerrar sesion.png' %}" alt=""></a></div>
+              </li>
+          </ul>
+      </nav>
+    </div>
+  </div>
+</body>
+</html>

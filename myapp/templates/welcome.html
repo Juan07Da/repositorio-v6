@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nex - Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'myapp/css/styles_welcome.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="titulo_principal">NEX</h1>
+        <a href="{% url 'login' %}">
+            <button class="boton_ingresar">Ingresar</button>
+        </a>
+    </div>
+
+    <div class="container_principal">
+        <div class="container_1">
+            <div class="container_a">
+                <p class="p1">Transformando la lucha contra el cáncer colorectal: Una plataforma innovadora que predice y clasifica, ayudando a salvar vidas con tecnología avanzada. ¡Descubre el futuro de la medicina hoy!</p>
+            </div>
+            <div class="container_b">
+                <img class="img_1" src="{% static 'myapp/img/imagen principal.jpg' %}" alt="">
+            </div>
+        </div>
+
+
+        <div class="container_2">
+            <div class="container_d">
+                <img class="img_2" src="{% static 'myapp/img/imagen principal dos.jpg' %}" alt="">
+            </div>
+            <div class="container_c">
+                <p class="p2">Nex es una plataforma web diseñada para ayudar en la clasificación predictiva de pacientes con cáncer colorectal. Utilizando descripciones clínicas, la plataforma analiza y procesa la información para predecir el estado y la evolución de la enfermedad. Su objetivo es proporcionar a los profesionales de la salud una herramienta eficaz que facilite la toma de decisiones y mejore el diagnóstico y tratamiento de los pacientes.</p>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

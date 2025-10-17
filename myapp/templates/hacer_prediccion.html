@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción Clínica</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/styles_hacer_prediccion.css' %}"> 
+</head>
+<body>
+
+    <h1>Análisis de Predicción Clínica</h1>
+    <p>Ingresa la descripción clínica del paciente para obtener una predicción de la categoría.</p>
+
+    <form method="post" action=".">
+        {% csrf_token %}
+        <label for="texto_clinico">Descripción Clínica:</label><br>
+        <textarea id="texto_clinico" name="texto_clinico" placeholder="Ej: Hombre de 70 años se realiza una colonoscopia de seguimiento..."></textarea><br><br>
+        <button type="submit">Hacer Predicción</button>
+    </form>
+
+    {% if resultado_prediccion %}
+        <hr>
+        <div class="resultado">
+            <h2>Resultado de la Predicción</h2>
+            <p><strong>Texto Analizado:</strong> {{ texto_ingresado }}</p>
+            <p><strong>Predicción Final del modelo:</strong> <strong>{{ resultado_prediccion }}</strong></p>
+        </div>
+    {% endif %}
+
+</body>
+</html>

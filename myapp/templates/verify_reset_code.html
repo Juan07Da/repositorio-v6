@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificacion Cambio de contraseña</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'myapp/css/styles_verify_reset_code.css' %}"
+    />
+  </head>
+  <body>
+    <div class="container_principal">
+      <div class="titulo"><h1>NEX</h1></div>
+
+      <form class="formulario" method="post">
+        {% csrf_token %}
+        <label>Código de verificación:</label>
+        <p>El codigo a sido enviado a tu correo</p>
+        <input type="text" name="code" required />
+        <button type="submit">Verificar</button>
+        {% if error %}
+        <p style="color: red">{{ error }}</p>
+        {% endif %}
+      </form>
+      <div class="links"><a class="link" href="{% url 'login' %}">Iniciar Sesion</a></div>
+    </div>
+  </body>
+</html>

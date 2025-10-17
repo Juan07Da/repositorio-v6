@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX - Plataforma de Predicción</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/styles_home.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+    <script src="{% static 'myapp/js/scripts.js' %}" defer></script>
+
+</head>
+
+<body>
+    <div class="container_principal">
+        <div class="menu">
+            <div class="sidebar">
+                <h2 class="logo">NEX</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <div class="lista"><a href="{% url 'home' %}"><img src="{% static 'myapp/icon/home.png' %}" alt="">Home</a></div>
+                        </li>
+                        <li>
+                            <div class="lista"><a href="#"><img src="{% static 'myapp/icon/predicciones.png' %}" alt="">Predicciones</a></div>
+                        </li>
+
+                        <li>
+                            <div class="lista"><a href="{% url 'hacer_prediccion' %}"><img src="{% static 'myapp/icon/hacer una prediccion.png' %}" alt="">Hacer prediccion</a></div>
+                        </li>
+
+                        <li>
+                            <div class="lista"><a href="{% url 'historia_clinica' %}"><img src="{% static 'myapp/icon/historia clinica.png' %}" alt="">Historia Clínica</a></div>
+                        </li>
+                        <li>
+                            <div class="lista"><a href="#"><img src="{% static 'myapp/icon/estadisticas.png' %}" alt="">Estadísticas</a></div>
+                        </li>
+                        <li>
+                            <div class="lista"><a href="#"><img src="{% static 'myapp/icon/biblioteca medica.png' %}" alt="">Biblioteca Médica</a></div>
+                        </li>
+                        <li>
+                            <div class="lista"><a href="#"><img src="{% static 'myapp/icon/noticias.png' %}" alt="">Noticias</a></div>
+                        </li>
+                        <li>
+                            <div class="lista"><a href="#"><img src="{% static 'myapp/icon/soporte y ayuda.png' %}" alt="">Soporte y Ayuda</a></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="perfil">
+                <nav>
+                    <ul>
+                        <li>
+                            <div class="lista"><a class="l1" href="">Perfil <img src="{% static 'myapp/icon/perfil.png' %}" alt=""></a></div>         
+                        </li>
+                        <li>
+                            <div class="lista"><a class="l1" href="{% url 'logout' %}">Cerrar sesión <img src="{% static 'myapp/icon/cerrar sesion.png' %}" alt=""></a></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container_central">
+            <div class="home">
+                <h1>Home</h1>
+                <p>Bienvenido a NEX plataforma de prediccion del cancer colorectal</p>
+            </div>
+            <div class="funciones_principales">
+                <h1>Funciones Principales</h1>
+                <div class="cards1">
+                    <button class="btn">
+                        <div class="texto_btn">Hacer una<br>prediccion</div>
+                        <div class="img_btn"><img src="{% static 'myapp/icon/hacer una prediccion.png' %}" alt=""></div>
+                    </button>
+                    <button class="btn">
+                        <div class="texto_btn">Ver<br>historias<br>clinicas</div>
+                        <div class="img_btn"><img src="{% static 'myapp/icon/ver historias clinicas.png' %}" alt=""></div>
+                    </button>
+                </div>
+                <div class="cards2">
+                    <button class="btn">
+                        <div class="texto_btn">Ver<br>estadisticas</div>
+                        <div class="img_btn"><img src="{% static 'myapp/icon/ver estadisticas.png' %}" alt=""></div>
+                    </button>
+                    <button class="btn">
+                        <div class="texto_btn">Perfil</div>
+                        <div class="img_btn"><img src="{% static 'myapp/icon/perfil.png' %}" alt=""></div>
+                    </button>
+                </div>
+            </div>
+            <div class="logos">
+                <img class="logo_individual1" src="{% static 'myapp/img/Logo iser.png' %}" alt="">
+                <img class="logo_individual2" src="{% static 'myapp/img/Logo uni.png' %}" alt="">
+            </div>
+        </div>
+
+        <div class="container_end">
+            <div class="card_end1">
+                <div class="texto_end1_btn">Hora:<br> <span id="hora"></span></div>
+                <div class="img_end1_btn"><img src="{% static 'myapp/icon/reloj.png' %}" alt=""></div>
+            </div>
+            <div class="card_end">
+                <div class="texto_end_btn">Usuarios<br>registrados:</div>
+                <div class="texto_end_btn_usuarios">- - - - - - - - - -</div>
+            </div>
+            <div class="card_end">
+                <div class="texto_end_btn">Predicciones<br>realizadas:</div>
+                <div class="texto_end_btn_usuarios">- - - - - - - - - -</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

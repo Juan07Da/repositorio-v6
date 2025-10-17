@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'myapp/css/styles_register.css' %}">
+</head>
+<body>
+    <div class="container_principal">
+        <div class="c_titulo"><h1 class="titulo">NEX</h1></div>
+        <form class="formulario" action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <div class="input_linea"><input type="text" id="first_name" name="first_name" placeholder="Ingresa tu nombre" required></div>
+            <div class="input_linea"><input type="text" id="last_name" name="last_name" placeholder="Ingresa tu apellido" required></div>
+            <div class="input_linea"><input type="email" id="email" name="email" placeholder="Ingresa tu correo" required></div>
+            <div class="input_linea2"><input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required></div>
+            {% if error %}
+            <div class="error"><p style="color: red;">{{ error }}</p></div>
+            {% endif %}
+            <div class="button"><button class="boton-registro" type="submit">Registrarse</button></div>
+        </form> 
+        <div><a class="link" href="{% url 'login' %}">Iniciar Sesion</a></div>
+        <div class="logos">
+            <img class="logo_individual1" src="{% static 'myapp/img/Logo iser.png' %}" alt="">
+            <img class="logo_individual2" src="{% static 'myapp/img/Logo uni.png' %}" alt="">
+        </div>    
+    </div>
+</body>
+</html>

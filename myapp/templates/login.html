@@ -1,0 +1,44 @@
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'myapp/css/styles_login.css' %}">
+</head>
+<body>
+    <div class="container_principal">
+        <div class="c_titulo"><h1 class="titulo">NEX</h1></div>
+        <form class="formulario" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div class="input_linea"><input type="email" id="email" name="email" placeholder="Correo" required></div>
+            <div class="input_linea2"><input type="password" id="password" name="password" placeholder="Contraseña" required></div>
+            {% if error %}
+            <div class="error"><p style="color: red;">{{ error }}</p></div>
+            {% endif %}
+            <div class="button"><button class="boton-inicio" type="submit">Iniciar sesión</button></div>
+        </form> 
+        <div class="boton_google"><button class="boton-inicio-google">
+            <a class="boton-link" href="{% provider_login_url 'google' %}">Inicia Secion con Google</a>
+            <img class="imagen_google" src="{% static 'myapp/img/Logo Google.png' %}" alt="">
+        </button></div>
+
+        <div class="clase-links">
+            <div><a class="links" href="{% url 'forgot_password' %}">¿Olvidaste la contraseña?</a></div>
+            <div><a class="links" href="{% url 'register' %}">Registrarse</a></div>
+        </div>
+        <div class="logos">
+            <img class="logo_individual1" src="{% static 'myapp/img/Logo iser.png' %}" alt="">
+            <img class="logo_individual2" src="{% static 'myapp/img/Logo uni.png' %}" alt="">
+        </div>
+               
+    </div>
+</body>
+</html>
+
+
+

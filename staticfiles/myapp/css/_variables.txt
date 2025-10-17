@@ -1,0 +1,8 @@
+$fond_oscuro: #1E1E1E;
+$fond_claro : #2A2A2A;
+$col_letra : white;
+$col_azul_electrico: #00B0FF;
+$col_azul_transicion_botones: #0086CC;
+$col_inputs : #333333;
+$letr_titulos: 'Orbitron', sans-serif;
+$letr_normal: 'Roboto', sans-serif;
